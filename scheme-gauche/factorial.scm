@@ -5,7 +5,7 @@
   (if (< n 1)
     1
     ; (* n 1)
-	#?= (* n (factorial_ (- n 1)))
+    #?= (* n (factorial_ (- n 1)))
   )
 )
 
@@ -15,7 +15,7 @@
   (define (factorial-impl n store)
     (if (< n 1)
       store
-	  #?= (factorial-impl (- n 1) (* n store)))
+      #?= (factorial-impl (- n 1) (* n store)))
   )
   (factorial-impl n 1)
 )
